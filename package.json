@@ -1,0 +1,18 @@
+{
+	"name" : "store_retrieve",
+	"version" : "0.0.1",
+	"author" : "Matthew Daiter",
+	"dependencies" : {
+		"restify" : "*",
+		"node-gyp" : "*",
+		"supertest" : "*",
+		"chai" : "*",
+		"mocha" : "*",
+		"word-list" : "*"
+	},
+	"scripts": {
+    	"preinstall": "node-gyp clean || true; node-gyp configure build",
+    	"install": "node-gyp rebuild",
+    	"test": "mocha test/test.js"
+  }
+}
